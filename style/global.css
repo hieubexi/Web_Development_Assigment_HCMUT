@@ -1,0 +1,20 @@
+html, body{
+    font-family: 'Lora', serif;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, #94bbe9 100%);
+    background-size: 400% 400%; 
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+   
+   }
+   @keyframes gradient {
+       0% {
+           background-position: 0% 50%;
+       }
+       50% {
+           background-position: 100% 50%;
+       }
+       100% {
+           background-position: 0% 50%;
+       }
+   }
