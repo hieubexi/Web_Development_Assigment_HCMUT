@@ -35,3 +35,9 @@ a{
     color: aliceblue;
     font-size:smaller;
 }
+.card{
+    border: none;
+}
+.my-preview{
+    margin: 40px 10% 40px 10%;
+}
