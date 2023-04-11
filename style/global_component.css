@@ -1,4 +1,37 @@
 .custom-navbar{
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-left: 2%;
+    /* background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, #000000 100%); */
+    background-color: rgb(7, 53, 59);
+    padding: 20px 5% 20px 5%;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+
+}
+a.navbar-brand,a.nav-link{
+    color: #fff !important;
+}
+
+.search-button{
+    border: solid 1px floralwhite;
+    color: floralwhite;
+}
+button.search-button:hover{
+    background-color: #fff;
+    color: black
+}
+input.search-input{
+    color: floralwhite;
+}
+input.search-input:focus{
+    box-shadow: none;
+    border: solid 1px floralwhite;
+}
+a{
+    color:#656d75;
+    text-decoration: none;
+}
+.my-footer{
+    padding: 70px 20px 70px 20px;
+    background-color: black;
+    color: aliceblue;
+    font-size:smaller;
 }
