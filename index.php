@@ -59,9 +59,9 @@ session_start();
   </button>
 </div>
 
-<div class="card text-bg-dark">
+<div class="card text-bg-dark"  >
   <a href="#">
-  <img src="./image/1.jpg" class="card-img" alt="...">
+  <img src="./image/1.jpg" class="card-img" alt="center image">
   </div>
   </a>
 </div>

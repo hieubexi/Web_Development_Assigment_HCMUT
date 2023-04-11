@@ -3,7 +3,7 @@ include("connection/connect.php");
 error_reporting(0);
 session_start();
 ?>
-<footer class="container-fluid  my-footer">
+<footer class="container-fluid my-footer ">
 <div class="row">
       <div class="col-12 col-md cursor-hover">
         <!-- <img class="mb-2" src="../image/gucci_logo.png" alt="" width="24" height="19"> -->

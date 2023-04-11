@@ -41,3 +41,10 @@ a{
 .my-preview{
     margin: 40px 10% 40px 10%;
 }
+
+.nav-link:hover{
+    font-weight: bolder; 
+}
+.nav-link:focus{
+    text-shadow: 0 0 24px whitesmoke;
+}
