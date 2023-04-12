@@ -2,7 +2,6 @@
 include("connection/connect.php");
 error_reporting(0);
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="./image/gucci_logo.png">
-    <title>@GUCHI</title>
+    <title>@GUXXI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./style/global.css">
@@ -44,7 +43,7 @@ session_start();
     <div class="carousel-item">
       <img src="./image/slide3.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>It's GUCHI TIME</h5>
+        <h5>It's GUXXI TIME</h5>
         <p>Spotlighting a passion for gaming and a strong determination.</p>
       </div>
     </div>
@@ -58,7 +57,6 @@ session_start();
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <div class="card text-bg-dark"  >
   <a href="#">
   <img src="./image/1.jpg" class="card-img" alt="center image">
@@ -95,7 +93,6 @@ session_start();
     </div>
   </div>
 </div>
-
 <!-- Here is footer -->
 <?php require_once "footer.php" ?>
 <!-- Script HERE -->

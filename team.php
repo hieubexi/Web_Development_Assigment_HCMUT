@@ -1,9 +1,3 @@
-<!-- <?php
-include("./");
-error_reporting(0);
-session_start();
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +5,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="./image/gucci_logo.png">
-    <title>@GUXXI Product</title>
+    <title>@GUXXI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./style/global.css">
@@ -23,31 +17,20 @@ session_start();
 </head>
 <body>
     <!-- HERE is header -->
-<?php include 'header.php';?>
+    <?php require_once "header.php" ?>
 
- <div class = "container ">
-    <div class = "row">
-    <div class="card-group">
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
-
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <!-- HERE is main container -->
+    <div class= "container" style ="margin-top :5%;margin-bottom :5%;">
+    <div class="card bg-dark text-white">
+  <img src="./image/slide2.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay" style="text-align:center; margin : auto;">
+    <h5 class="card-title " style="margin-top: 5% ">Message from Team</h5>
+    <p class="card-text ">"This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."</p>
   </div>
 </div>
     </div>
- </div>
-    <!-- Here is body -->
 
-<!-- Here is footer -->
-  <?php include 'footer.php';?>
-<!-- Script HERE -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- HERE is footer -->
+    <?php require_once "footer.php" ?>
 </body>
 </html>

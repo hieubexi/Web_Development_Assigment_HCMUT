@@ -2,13 +2,12 @@
 include("connection/connect.php");
 error_reporting(0);
 session_start();
-
 ?>
 <!--header starts-->
 <header class="header">
-<nav class="navbar navbar-expand-md custom-navbar">
+<nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">@GUCHI</a>
+    <a class="navbar-brand" href="index.php">@GUXXI</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,28 +18,32 @@ session_start();
           <a class="nav-link" href="#">What news?
           </a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="list_product.php">Men</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Women</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Hand bags</a>
-        </li>
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Product</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="list_product.php">Men</a></li>
+      <li><a class="dropdown-item" href="#">Women</a></li>
+      <li><a class="dropdown-item" href="#">Hand bags</a></li>
+    </ul>
+</li>
         <?php
                     if (empty($_SESSION['username'])) // if user is not login
                     {
-                        echo '<li class="nav-item">
+                        echo '
+                        <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="login.php">Log In</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="signup.php">Join Us</a>
                       </li>';
 
                     } else {
-                        //if user is login
-                        // echo '<li class="nav-item"><a style="color: white" class="has-arrow  "href="cart.php" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu"> Cart </span> </li>';
                         echo '
                         <li class="nav-item">
-                        <a class="nav-link" href="Cart">Cart</a>
+                        <a class="nav-link" href="Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-dash-fill" viewBox="0 0 16 20">
+  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+</svg> Cart</a>
                         </li>
                         <li class="nav-item dropdown" style= "font-style: italic; ">
                         <a class="nav-link dropdown-toggle account" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >

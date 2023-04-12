@@ -48,3 +48,6 @@ a{
 .nav-link:focus{
     text-shadow: 0 0 24px whitesmoke;
 }
+.my-login{
+    margin: 5% 0 10% 0;
+}
