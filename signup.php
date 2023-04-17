@@ -39,9 +39,9 @@ include("connection/connect.php"); // connection
 		if($password != $repeat_password ){  //matching passwords
     	   	$pass_copy_message = "Password do not match! Please enter the password the same as 	you entered";
    	 	}
-		else if(strlen($password) <= 6)  //cal password length
+		else if(strlen($password) <= 5)  //cal password length
 		{
-			$pass_long_message = "Password is too short! Please enter more than 6 characters";
+			$pass_long_message = "Password is too short! Please enter more than 5 characters";
 		}
 		else if(strlen($phone_number) != 10)  //cal phone length
 		{
