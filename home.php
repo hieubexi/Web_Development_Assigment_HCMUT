@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require_once("../db.php");
+    require_once("./admin/config/Database.php");
  ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,7 @@
         <p>In the fourth act of Vogue and Guchi Bloom's 'The Awakening' series, the founder of the Gulf's first arthouse cinema celebrates reflection and inspiration through film.</p>
       </div>
     </div>
+
     <div class="carousel-item" data-bs-interval="2000">
       <img src="./image/slide2.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
@@ -64,35 +65,9 @@
   </a>
 </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4 my-preview">
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-</div>
+<?php
+ require_once "story.php"
+?>
 <!-- Here is footer -->
 <?php require_once "footer.php" ?>
 <!-- Script HERE -->
