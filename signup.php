@@ -2,6 +2,14 @@
 session_start(); //temp session
 error_reporting(0); // hide undefine index
 include("connection/connect.php"); // connection
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$phone_number = $_POST['phone_number'];
+$repeat_password = $_POST['repeat_password'];
+$address = $_POST['address'];
 
    if(isset($_POST['check-exits'])){
    $check_username1= mysqli_query($db, "SELECT username FROM users where username = '".$_POST['username']."' ");
@@ -14,15 +22,7 @@ include("connection/connect.php"); // connection
       }
    }
    //if submit btn is pressed
-  if(isset($_POST['submit'] )) {
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$email = $_POST['email'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$phone_number = $_POST['phone_number'];
-	$repeat_password = $_POST['repeat_password'];
-	$address = $_POST['address'];
+  else if(isset($_POST['submit'] )) {
     if(  //fetching and find if its empty
             empty($username)|| 
             empty($firstname)|| 
@@ -39,7 +39,7 @@ include("connection/connect.php"); // connection
 		if($password != $repeat_password ){  //matching passwords
     	   	$pass_copy_message = "Password do not match! Please enter the password the same as 	you entered";
    	 	}
-		else if(strlen($password) <= 5)  //cal password length
+		else if(strlen($password) < 6)  //cal password length
 		{
 			$pass_long_message = "Password is too short! Please enter more than 5 characters";
 		}
@@ -60,10 +60,10 @@ include("connection/connect.php"); // connection
 	 //inserting values into db
 			$mql = "INSERT INTO users(username,firstname,lastname,email,phone_number,password,address,role) 
    			VALUES('".$username."','".$firstname."','".$lastname."',
-   			'".$email."','".$phone_number."','".$password."','".$address."','customer')";
+   			'".$email."','".$phone_number."','".$_POST['password']."','".$address."','customer')";
 			mysqli_query($db, $mql);
 			$full_success = "You account is created successfully";
-		 	header("refresh:1;url=login.php"); // redireted once inserted success
+		 	header("refresh:2;url=login.php"); // redireted once inserted success
       	}
 	}
 }
@@ -98,44 +98,43 @@ include("connection/connect.php"); // connection
 	<form class="row g-3 cursor-hover " action="" method="post">
     <h1 class="h3 mb-3 fw-normal cursor-hover">Sign Up</h1>
   <div class="col-md-6">
-    <label for="firstname" class="form-label">First Name</label>
-    <input type="text"  class="form-control" id="firstname" name ="firstname">
+    <label for="Firstname" class="form-label">First Name</label>
+    <input type="text"  class="form-control" id="Firstname" name ="firstname" value = "<?php echo $_POST['firstname']?>">
   </div>
   <div class="col-md-6">
-    <label for="lastname" class="form-label">Last Name</label>
-    <input type="lastname" class="form-control" id="lastname" name = "lastname"> 
+    <label for="Lastname" class="form-label">Last Name</label>
+    <input type="lastname" class="form-control" id="Lastname" name = "lastname" value = "<?php echo $_POST['lastname']?>" > 
   </div>
   <div class="col-12">
-  <label for="username" class="form-label">User Name</label>
-    <input type="username" class="form-control" id="username" name ="username">
+  <label for="Username" class="form-label">User Name</label>
+    <input type="username" class="form-control" id="Username" name ="username" value = "<?php echo $_POST['username']?>">
 	<span style="color:red;"><?php echo  $message ; ?></span>
 	<span style="color:green;"><?php echo  $success ; ?></span>
   </div>
   <div class="col-md-6">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password" name ="password">
+    <label for="Password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="Password" name ="password" >
 	<span style="color:red;"><?php echo  $pass_long_message ; ?></span>
   </div>
   <div class="col-md-6">
-    <label for="repeat_password" class="form-label">Confirm Password</label>
-    <input type="password" class="form-control" id="repeat_password" name ="repeat_password">
+    <label for="Repeat_password" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="Repeat_password" name ="repeat_password">
 	<span style="color:red;"><?php echo  $pass_copy_message ; ?></span>
   </div>
   <div class="col-12">
     <label for="phone_number" class="form-label">Phone Number</label>
-    <input type="text" class="form-control" id="phone_number" name ="phone_number" >
+    <input type="text" class="form-control" id="phone_number" name ="phone_number" value = "<?php echo $_POST['phone_number']?>">
 	<span style="color:red;"><?php echo  $phone_message ; ?></span>
   </div>
   <div class ="col-12">
   <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" name ="email"
-	placeholder="example@address.com">
+    <input type="email" class="form-control" id="email" name ="email" placeholder="example@address.com" value = "<?php echo $_POST['email']?>">
 	<span style="color:red;"><?php echo  $email_exit_message ; ?></span>
 	<span style="color:red;"><?php echo  $email_valid_message ; ?></span>
   </div>
   <div class="col-12">
     <label for="address" class="form-label">Address</label>
-    <input type="text" class="form-control" id="address" name ="address">
+    <input type="text" class="form-control" id="address" name ="address" value = "<?php echo $_POST['address']?>">
   </div>
   <div class ="col-12">
   <span style="color:red;"><?php echo  $message_all ; ?></span>

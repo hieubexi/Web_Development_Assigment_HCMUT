@@ -8,6 +8,7 @@
 }
 a.navbar-brand,a.nav-link{
     color: #fff !important;
+
 }
 
 .search-button{
@@ -50,4 +51,61 @@ a{
 }
 .my-login{
     margin: 5% 0 10% 0;
+}
+.update-button{
+    background-color: #07353b;
+    color: antiquewhite;
+}
+
+
+.update-button:focus{
+    background-color: #07353b;
+    color: antiquewhite;
+    font-weight: bolder;
+}
+.confirm-button{
+    background-color: #970068;
+    color:antiquewhite;
+}
+.my-button{
+    height: 50px;
+    width: 25%;
+    border-radius : 5px ;
+    border:none;
+    font-size: larger;
+}
+.my-button:hover{
+    font-weight: bolder;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+a:hover{
+    color:rgb(14, 1, 1);
+    font-weight: bolder;
+}
+.my-card:hover{
+    border-radius: none;
+    mix-blend-mode:darken;
+    box-shadow: 0 0 200px rgba(0, 23, 35, 0.448) ; 
+}
+.price{
+    font-size: x-large;
+    color: #4b0101;
+}
+.discount{
+    font-size: large;
+    color: rgb(3, 98, 98);
+}
+.dimension{
+    font-size: large;
+}
+.buy-button{
+    background-color: #4b0101;
+    color: beige;
+}
+.addCart-button{
+    background-color: #01414b;
+    color: beige;
+}
+p.card-text{
+    font-size: larger;
 }

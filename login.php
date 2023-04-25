@@ -70,6 +70,7 @@
     </div>
     <span style="color:red;"><?php echo "<br>". $message ; ?></span>
     <span style="color:green;"><?php echo "<br>". $success; ?></span>
+    <p> Don't have account yet? <a href="signup.php" style ="font-weight:bolder; color:brown">Join Us!</a></p>
     <input class="w-100 btn btn-lg btn-primary pointer-hover" type="submit" name = "submit" value="Log In"></input>
   </form>
             </div>
