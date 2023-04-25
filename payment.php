@@ -39,12 +39,10 @@
        $total = $product['price']*$_POST['quantity']* (1 - $product['discount']/100);
        $mql ="INSERT INTO `orders`( `code`, `user_id`, `product_id`, `quantity`, `invoice`, `status`, `payment`) VALUES ('".rand(5000,1000)."','".$user['id']."','".$product['id']."','".$_POST['quantity']."','".$total."','".$status."','".$_POST['paymentMethod']."')";
      mysqli_query($db, $mql);
-     
-
      $delete_mql= "DELETE FROM `carts` WHERE `user_id`=".$user['id']." AND `product_id`=".$product['id'];
      mysqli_query($db, $delete_mql);
      $full_success = "Thank you for order! Hope you enjoy your order";
-     header("refresh:1;url=index.php"); 
+     $mess="Back to homepage";
       }
     }
 ?>
@@ -148,6 +146,8 @@
           <div class="mb-3">
           <span style ="color:red"> <?php echo $error_all?></span>
           <span style ="color:green"> <?php echo $full_success?></span>
+          <a href="home.php"> <span style ="color:darkblue;"> <?php echo $mess?></span></a>
+         
           </div>
           <div class ="col-lg-5 col-md 10">
           <input class="w-100 my-button buy-button" type="submit" name ="submit"></input>

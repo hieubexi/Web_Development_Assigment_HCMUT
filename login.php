@@ -56,22 +56,22 @@
     <!-- INPUT HERE -->
     <div class ="login-container my-login text-center">
      <div class ="col-md-4 offset-md-4">
-            <form class="cursor-hover" action="" method ="post">
-    <img class="mb-4 cursor-hover" src="./image/gucci_logo.png" alt="" width="140" >
+    <form class="cursor-hover" action="" method ="post">
+    <img class=" cursor-hover" src="./image/gucci_logo.png" alt="" width="140" >
     <h1 class="h3 mb-3 fw-normal cursor-hover">Please Log In</h1>
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" name ="username">
       <label for="floatingInput">User name</label>
     </div>
     <br> 
-    <div class="form-floating">
+    <div class="form-floating mb-3">
       <input type="password" class="form-control" id="floatingPassword" name = "password">
       <label for="floatingPassword">Password</label>
     </div>
-    <span style="color:red;"><?php echo "<br>". $message ; ?></span>
-    <span style="color:green;"><?php echo "<br>". $success; ?></span>
+    <span style="color:red;"><?php echo  $message ; ?></span>
+    <span style="color:green;"><?php echo $success; ?></span>
     <p> Don't have account yet? <a href="signup.php" style ="font-weight:bolder; color:brown">Join Us!</a></p>
-    <input class="w-100 btn btn-lg btn-primary pointer-hover" type="submit" name = "submit" value="Log In"></input>
+    <input class="w-100 my-button addCart-button" type="submit" name = "submit" value="Log In"></input>
   </form>
             </div>
         </div>

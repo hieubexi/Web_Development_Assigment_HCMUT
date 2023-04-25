@@ -32,11 +32,11 @@ $query=mysqli_query($db,$sql);
 </head>
 <body>
     <!-- HERE is header -->
-    
 <?php include 'header.php';?>
 <div class ="container" style ="margin-top:2%; margin-bottom:5%">
 <div class ="row text-center" style ="margin-bottom:20px;">
-    <h2><?php echo $categoryType['name']. " Collection"?></h2>
+    <h2 style="color: #4b0101;"><?php echo "@GUXXI - The ". $categoryType['name']?></h2>
+    <hr>
 </div>
     <div class ="row">
     <?php

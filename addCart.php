@@ -34,6 +34,8 @@ $product = mysqli_fetch_array($query);
         $mql = "INSERT INTO `carts`( `user_id`, `product_id` ) VALUES ('" . $user['id'] . "','" . $product['id'] . "')";
         mysqli_query($db, $mql);
         $succes_cart = "Add to cart successfully";
+        $mess="Back to homepage";
+        $showCart ="Go to Cart page";
     }
     ?>
     <div class="container" style="margin-top:2%; margin-bottom:5%;">
@@ -62,7 +64,9 @@ $product = mysqli_fetch_array($query);
                     
                 <div style ="margin-top:10px;">
                     <p style ="color:green;">  <?php echo $succes_cart ;?></p>
-                  
+                    
+                    <a href="home.php"><p style ="color:darkblue;"> <?php echo $mess;?></p></a>
+                    <a href="cart.php"><p style ="color:indigo;"> <?php echo $showCart;?></p></a>
                 </div>
 
 

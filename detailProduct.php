@@ -1,7 +1,6 @@
 <?php 
     session_start();
     include("connection/connect.php");
-
     $productID = $_GET['productID'];
     $sql="SELECT * FROM products WHERE id = $productID";
     $query=mysqli_query($db,$sql);
@@ -50,17 +49,30 @@
     <p class="card-text discount mb-3"> Discout: <?php echo $product['discount']. " %"?></p>
     <p class="card-text dimension mb-3"> Size:  <?php echo $product['dimension']?></p>
     <p class="card-text =mb-3">  <?php echo $product['description']?></p>
-    
+    <?php
+    if (empty($_SESSION['username'])){
+      $href_cart ="#";
+      $href_pay ="#";
+      $error ="Your must login for this action!" ;
+    }else{
+      $href_cart ='addCart.php?productID='.$productID;
+      $href_pay ='payment.php?productID='.$productID;
+      $error ="";
+    }
+    ?>
     <button  class="my-button text-center addCart-button" name="addCart">
         <svg class="bi" width="25" height="25" fill="currentColor ">  
         <use xlink:href="bootstrap-icons.svg#cart-plus-fill" /> </svg> 
-        <a href="<?php echo 'addCart.php?productID='.$productID ?>"  style="color:beige" >Add to cart </a>
+        <a href="<?php echo $href_cart ?>"  style="color:beige" >Add to cart </a>
     </button>
     <button class="my-button text-center buy-button" name="buyNow">
         <svg class="bi" width="25" height="25" fill="currentColor ">
         <use xlink:href="bootstrap-icons.svg#bag-check-fill" /> </svg>  
-        <a href="<?php echo 'payment.php?productID='.$productID ?>" style="color:beige">Buy Now</a>  
+        <a href="<?php echo $href_pay ?>" style="color:beige">Buy Now</a>  
     </button>
+    <div>
+      <p style ="color:red"><?php echo $error ?></p>
+    </div>
    
     <div style="margin-top:5px">
     <!-- <span style ="color:red"> <?php echo $error_cart ?></span>
