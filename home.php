@@ -1,8 +1,6 @@
 <?php 
-    session_start();
     require_once("./admin/config/Database.php");
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +14,6 @@
     <link rel="stylesheet" href="./style/global.css">
      <link rel="stylesheet" href="./style/global_component.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="stylesheet" href="./node_modules/bootstrap-icons/icons/">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
 </head>

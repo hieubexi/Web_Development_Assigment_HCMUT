@@ -13,7 +13,5 @@ $product=mysqli_fetch_array($query);
     <?php
     echo $product['content'];
     ?>
-    dasdasdasdasdasdasd
-    asdasd
-    dasda
+
 </div>

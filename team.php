@@ -27,13 +27,7 @@
     <h5 class="card-title mb-5" style="margin-top: 5% ">Message from Team</h5>
     <p class="card-text my-story"  style="color:beige;">"Dear valued customer, 
 
-At our fashion team, we are committed to bringing you the very best products that meet your needs and exceed your expectations. We understand that you have a wide range of options when it comes to choosing your fashion items, and we strive to make sure that our offerings stand out as the best in the market. <br>
-
-To achieve this, we take great care in every aspect of our product development process. From researching the latest trends and materials, to designing and crafting each piece with attention to detail, to rigorously testing our products to ensure their quality and durability, we leave no stone unturned in our pursuit of excellence.  <br>
-
-But our commitment to you doesn't end with just the product. We also believe in providing you with a seamless shopping experience, from browsing our collections online to receiving your purchases at your doorstep. Our customer service team is always on standby to answer any questions or concerns you may have, and we offer hassle-free returns and exchanges to make sure you are completely satisfied with your purchase.  <br>
-
-We take pride in knowing that our products have become an integral part of your everyday life, and we thank you for choosing us as your fashion partner. We look forward to continuing to bring you the very best in fashion and style."</p>
+At our fashion team, we are committed to bringing you the very best products that meet your needs and exceed your expectations. We understand that you have a wide range of options when it comes to choosing your fashion items, and we strive to make sure that our offerings stand out as the best in the market. "</p>
   </div>
 </div>
     </div>
