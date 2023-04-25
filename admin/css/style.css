@@ -1,0 +1,35 @@
+.my-button{
+    height: 40px;
+    width: 100%;
+    border-radius : 5px ;
+    border:none;
+    font-size: smaller;
+}
+.my-button:hover{
+    font-weight: bolder;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.buy-button{
+    background-color: #4b0101;
+    color: beige;
+}
+.addCart-button{
+    background-color: #01414b;
+    color: beige;
+}
+.my-li{
+    color:#4b0101;
+}
+.my-li:hover{
+    font-weight: bolder;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+li:hove{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+li.my-active{
+    background-color: #4b0101;
+}
+span.my-p-active{
+    color:beige;
+}
